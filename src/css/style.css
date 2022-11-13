@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(60deg, #5800cb, #9d46e4, #5800cb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-login {
+    height: 400px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.041);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(100%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.login-input {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.login-input label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: .1rem;
+}
+.login-input input{
+    width: 220px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    padding: .5rem;
+}
+.login-input input:focus {
+    outline: none;
+}
+
+
+.login-input span {
+    width: 220px;
+    height: 1px;
+    background: linear-gradient(#E75590, #00C1CB);
+    top: 2px;
+}
+
+.container-login button {
+    top: 1rem;
+    position: relative;
+    width: 220px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    letter-spacing: .04rem;
+    font-size: 1.1rem;
+    transition: all .5s;
+}
+
+.container-login button:hover {
+    transform: scale(1.1);
+    letter-spacing: .3rem;
+    color: #00C1CB;
+    border-color: #00C1CB;
+}
+
+.container-login button::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 1px solid #00C1CB;
+    top: -8%;
+    left: 80%;
+    transition: all .5s;
+}
+
+.container-login button::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 1px solid #00C1CB;
+    bottom: -8%;
+    left: 20%;
+    transition: all .5s;
+}
+
+.container-login button:hover::after {
+    left: 20%;
+    border-color: #000000;
+    scale: 1.1;
+}
+
+.container-login button:hover::before {
+    left: 80%;
+    border-color: #000000;
+    scale: 1.1;
+}
